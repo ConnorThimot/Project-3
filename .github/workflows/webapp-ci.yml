@@ -22,4 +22,3 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps
       - run: npx playwright test
-      - run: npm run build || echo "No build step"
