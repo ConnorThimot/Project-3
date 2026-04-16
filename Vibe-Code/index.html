@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <!-- Wrapper that holds both the score box and the game -->
+        <div class="game-wrapper">
+
+            <!-- Score display section (left side of the board) -->
+            <div class="score-box">
+                <h2>Score</h2>
+
+                <!-- Player score (updated dynamically with JavaScript) -->
+                <p>Player: <span id="playerScore">0</span></p>
+
+                <!-- AI score (updated dynamically with JavaScript) -->
+                <p>AI: <span id="aiScore">0</span></p>
+            </div>
+
+            <!-- Main game container -->
+            <div class="container">
+
+                <!-- Game title -->
+                <h1>Tic-Tac-Toe</h1>
+
+                <!-- Displays current game status (turns, win, draw) -->
+                <div id="status">Player X's turn</div>
+
+                <!-- Game board (3x3 grid) -->
+                <div class="board" id="board">
+
+                    <!-- Each cell represents one square on the board -->
+                    <!-- data-index is used in JavaScript to track position -->
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+
+                <!-- Button to reset the game board and state -->
+                <button id="restart">Restart Game</button>
+            </div>
+        </div>
+
+        <!-- Link to JavaScript file containing game logic -->
+        <script src="script.js"></script>
+    </body>
+</html>
