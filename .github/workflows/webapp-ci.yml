@@ -1,4 +1,4 @@
-name: Web App CI
+name: Web App CI (Debug)
 
 on:
   push:
@@ -15,10 +15,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
+      - name: Show folder structure
+        run: ls -R
 
-      - run: npm ci
-      - run: npx playwright install --with-deps
-      - run: npx playwright test --reporter=list --debug
+      - name: Node version
+        run: node -v
+
+      - name: Install dependencies (verbose)
+        run: npm ci --verbose
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Check Playwright version
+        run: npx playwright --version
+
+      - name: Run tests (forced output)
+        run: npx playwright test --reporter=line --debug
