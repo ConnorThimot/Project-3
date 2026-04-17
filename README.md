@@ -1,2 +1,2 @@
 # Project-3
-aaaaaaaaaaaaaaaaaaaaaa
+GitHub Actions with ci.yml for a java project (blackjack) and a web app (vibe-code)
