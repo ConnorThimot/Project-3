@@ -31,4 +31,4 @@ jobs:
         run: npx playwright --version
 
       - name: Run tests (forced output)
-        run: npx playwright test --reporter=line --headless
+        run: npx playwright test --reporter=line
