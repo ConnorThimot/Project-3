@@ -5,8 +5,11 @@ test.describe('Tic-Tac-Toe App', () => {
 
     // Runs before EACH test
     // This ensures every test starts with a fresh page
+    const path = require('path');
+
     test.beforeEach(async ({ page }) => {
-        await page.goto('/');
+        const filePath = 'file://' + path.resolve(__dirname, '../index.html');
+        await page.goto(filePath);
     });
 
     // Test that the page loads and basic UI is correct
